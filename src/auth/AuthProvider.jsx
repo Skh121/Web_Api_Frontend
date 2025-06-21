@@ -32,9 +32,10 @@ const AuthContextProvider = ({children})=>{
             logout();
         }
         setLoading(false)
-    },[])
+    },[]);
+    const role = user?.role;
     return (
-        <AuthContext.Provider value={{user,loading,login,logout,isAuthenticated:user!==null}}>
+        <AuthContext.Provider value={{user,loading,login,logout,role,isAuthenticated:user!==null}}>
             {children}
         </AuthContext.Provider>
     )
