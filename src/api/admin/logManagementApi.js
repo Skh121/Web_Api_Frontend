@@ -9,8 +9,10 @@ export const logManagementApi = async (formData) => {
   return response;
 };
 
-export const getTradesApi = async () => {
-  const response = await instance.get("/admin/log");
+export const getTradesApi = async ({ page, limit }) => {
+  const response = await instance.get("/admin/log", {
+    params: { page, limit },
+  });
   return response;
 };
 
@@ -30,5 +32,30 @@ export const updateTradeApi = async (tradeId, formData) => {
 
 export const deleteTradeApi = async (tradeId) => {
   const response = await instance.delete(`/admin/log/${tradeId}`);
+  return response;
+};
+
+export const fetchTradeStats = async () => {
+  const response = await instance.get("/admin/log/stats");
+  return response;
+};
+
+export const fetchCalendarStats = async (year, month) => {
+  const response = await instance.get("/admin/log/calendar", {
+    params: {
+      year,
+      month,
+    },
+  });
+  return response;
+};
+
+export const getTradesForReportApi = async ({ startDate, endDate }) => {
+  const response = await instance.get("/admin/log/report", {
+    params: {
+      startDate,
+      endDate,
+    },
+  });
   return response;
 };
