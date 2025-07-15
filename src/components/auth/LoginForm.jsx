@@ -29,21 +29,6 @@ const LoginForm = () => {
 
   return (
     <>
-      <button className="w-full flex items-center justify-center border border-gray-300 rounded-lg py-2 mb-4 hover:bg-gray-100 transition">
-        <img
-          src="https://www.svgrepo.com/show/475656/google-color.svg"
-          alt="Google"
-          className="h-5 w-5 mr-2"
-        />
-        <span>Sign in with Google</span>
-      </button>
-
-      <div className="flex items-center justify-center mb-4">
-        <div className="border-t w-1/4 border-gray-300"></div>
-        <span className="mx-2 text-sm text-gray-400">or</span>
-        <div className="border-t w-1/4 border-gray-300"></div>
-      </div>
-
       <form onSubmit={formik.handleSubmit} className="space-y-4 text-left">
         <div>
           <label className="block text-sm text-gray-600">Email</label>
@@ -76,9 +61,12 @@ const LoginForm = () => {
         </div>
 
         <div className="text-right text-sm">
-          <a href="#" className="text-blue-600 hover:underline">
+          <Link
+            to={"/request-reset-password"}
+            className="text-blue-600 hover:underline"
+          >
             Forgot password?
-          </a>
+          </Link>
         </div>
 
         <button

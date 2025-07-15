@@ -62,12 +62,7 @@ const AdminPanel = () => {
   }, [searchTerm]);
 
   const [activeTab, setActiveTab] = useState("User Management");
-  const tabs = [
-    "User Management",
-    "System Analytics",
-    "Feature Flags",
-    "System Settings",
-  ];
+  const tabs = ["User Management"];
 
   const { data, isLoading, isError, error, isFetching } = useAdminUser(
     page,
