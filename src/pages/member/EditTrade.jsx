@@ -5,14 +5,14 @@ import * as Yup from "yup";
 
 // Import all hooks and components
 import { useGetTradeById, useUpdateTrade } from "../../hooks/uselogManagement";
-import InputField from "../../components/admin/Log Management/InputField";
-import SelectField from "../../components/admin/Log Management/SelectField";
-import DatePickerField from "../../components/admin/Log Management/DatePickerField";
-import TradeDirectionToggle from "../../components/admin/Log Management/TradeDirectionToggle";
-import TagSelector from "../../components/admin/Log Management/TagSelector";
-import TextAreaField from "../../components/admin/Log Management/TextAreaField";
-import FileUpload from "../../components/admin/Log Management/FileUpload";
-import ActionButtons from "../../components/admin/Log Management/ActionButtons";
+import InputField from "../../components/admin/logManagement/InputField";
+import SelectField from "../../components/admin/logManagement/SelectField";
+import DatePickerField from "../../components/admin/logManagement/DatePickerField";
+import TradeDirectionToggle from "../../components/admin/logManagement/TradeDirectionToggle";
+import TagSelector from "../../components/admin/logManagement/TagSelector";
+import TextAreaField from "../../components/admin/logManagement/TextAreaField";
+import FileUpload from "../../components/admin/logManagement/FileUpload";
+import ActionButtons from "../../components/admin/logManagement/ActionButtons";
 
 const tradeValidationSchema = Yup.object({
   symbol: Yup.string().required("Symbol is required"),
