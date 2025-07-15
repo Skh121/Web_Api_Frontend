@@ -12,3 +12,12 @@ export const checkoutUserApi = async(data)=>{
     const response = await instance.post("/auth/checkout",data)
     return response;
 }
+export const requestResetPasswordApi = async(data) =>{
+  const response = await instance.post("/auth/request-reset", data)
+  return response;
+}
+
+export const resetPasswordApi = async(data, token) =>{
+    const response = await instance.post("/auth/reset-password/" + token, data)
+    return response;
+}
